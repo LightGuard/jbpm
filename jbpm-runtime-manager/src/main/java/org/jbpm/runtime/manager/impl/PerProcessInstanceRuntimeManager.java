@@ -195,8 +195,7 @@ public class PerProcessInstanceRuntimeManager extends AbstractRuntimeManager {
         // process currently active runtime engines
         Map<Object, RuntimeEngine> currentlyActive = local.get();
 
-        if (currentlyActive != null && !currentlyActive.isEmpty()) {
-            @SuppressWarnings("unchecked")
+        if (currentlyActive != null && !currentlyActive.isEmpty()) {            
             Entry<Object, RuntimeEngine> activeEngines[] = currentlyActive.entrySet()
                     .toArray(new Entry[currentlyActive.size()]);
             Set<Object> enginesToDelete = new HashSet<>();
